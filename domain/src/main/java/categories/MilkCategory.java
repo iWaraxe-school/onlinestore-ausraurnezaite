@@ -1,7 +1,7 @@
 package categories;
 
 public class MilkCategory extends Category {
-    public MilkCategory(String categoryName) {
-        super(categoryName);
+    public MilkCategory() {
+        super("milk");
     }
 }
