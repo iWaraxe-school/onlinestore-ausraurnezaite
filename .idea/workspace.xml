@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/StoreApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/categories/PhoneCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/onlinestore-ausraurnezaite.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="created domain classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -80,6 +74,21 @@
       <option name="presentableId" value="Default" />
       <updated>1651752167615</updated>
     </task>
+    <task id="LOCAL-00001" summary="created domain classes">
+      <created>1652096737446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652096737446</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created domain classes">
+      <created>1652096859767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652096859767</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,5 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="created domain classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="created domain classes" />
   </component>
 </project>

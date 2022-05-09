@@ -9,6 +9,7 @@ import java.util.List;
 public abstract class Category {
     private String name;
     private List<Product> productList;
+
     public Category(String categoryName) {
         this.name = categoryName;
         this.productList = new ArrayList<Product>();
@@ -24,6 +25,10 @@ public abstract class Category {
 
     public void setProductList(List<Product> productList) {
         this.productList = productList;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

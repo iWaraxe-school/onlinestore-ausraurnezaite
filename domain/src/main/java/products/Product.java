@@ -23,7 +23,7 @@ public class Product {
         return price;
     }
 
-    public String toString(){
+    public String toString() {
         return ("Name: " + name + ", Rate: " + rate + ", Price: " + price);
     }
 }
