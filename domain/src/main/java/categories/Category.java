@@ -1,22 +1,25 @@
 package categories;
 
-
 import products.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Category {
-    private String name;
+    private CategoryNames name;
     private List<Product> productList;
 
-    public Category(String categoryName) {
+    public Category(CategoryNames categoryName) {
         this.name = categoryName;
         this.productList = new ArrayList<Product>();
     }
 
     public void addProduct(Product product) {
         productList.add(product);
+    }
+
+    public CategoryNames getName() {
+        return name;
     }
 
     public List<Product> getProductList() {
@@ -27,12 +30,12 @@ public abstract class Category {
         this.productList = productList;
     }
 
-    public void setName(String name) {
+    public void setName(CategoryNames name) {
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Category: name '" + name + "' , product list: " + productList;
+        return "Category: name '" + name + "' , product list: " + productList.toString().replaceAll("\\[|\\]", "") + ".";
     }
 }

@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="changes in domain classes">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;">
+      <change afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/categories/CategoryNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/BikeCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/CategoryNames.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/MilkCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/PhoneCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/target/classes/products/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/RandomStorePopulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/target/classes/store/RandomStorePopulator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/PhoneCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/PhoneCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +82,26 @@
       <recent name="categories" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="StoreApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="consoleApp.StoreApp" />
+      <module name="consoleApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="consoleApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StoreApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652098038360</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changes in domain classes">
+      <created>1652098329175</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652098329175</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +163,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="created domain classes" />
     <MESSAGE value="changes in domain classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in domain classes" />
+    <MESSAGE value="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;" />
   </component>
 </project>
