@@ -16,7 +16,8 @@ import org.reflections.scanners.SubTypesScanner;
 public class StoreHelper {
     Store store;
 
-    public StoreHelper() {
+    public StoreHelper(Store store) {
+        this.store = store;
     }
 
     public void fillStoreRandomly() {

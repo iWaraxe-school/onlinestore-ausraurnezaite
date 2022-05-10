@@ -9,7 +9,7 @@ public class Store {
     private List<Category> categoryList;
 
     public Store() {
-        this.categoryList = new ArrayList<Category>();
+        this.categoryList = new ArrayList<>();
     }
 
     public void addCategory(Category category) {
