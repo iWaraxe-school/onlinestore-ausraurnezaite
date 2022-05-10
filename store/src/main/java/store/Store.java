@@ -21,7 +21,7 @@ public class Store {
     }
 
     public void printCategories() {
-        categoryList.toString().replaceAll("\\[|\\]", "");
+        System.out.println(categoryList.toString().replaceAll("\\[|\\]", ""));
     }
 
     @Override

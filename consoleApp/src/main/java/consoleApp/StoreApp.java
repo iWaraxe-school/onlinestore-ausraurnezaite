@@ -9,5 +9,6 @@ public class StoreApp {
         StoreHelper helper = new StoreHelper(store);
         helper.fillStoreRandomly();
         store.printCategories();
+        System.out.println(store);
     }
 }

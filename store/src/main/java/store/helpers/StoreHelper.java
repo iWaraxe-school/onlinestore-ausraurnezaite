@@ -40,7 +40,7 @@ public class StoreHelper {
     public static Map<Category, Integer> createProductListToAdd() {
         Map<Category, Integer> productsToAdd = new HashMap<>();
 
-        Reflections reflections = new Reflections("domain.categories", new SubTypesScanner());
+        Reflections reflections = new Reflections("categories", new SubTypesScanner());
 
         //Get all existing subtypes of category
         Set<Class<? extends Category>> subTypes = reflections.getSubTypesOf(Category.class);

@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="RandomStorePopulator and StoreHelper added">
-      <change afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/StoreHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment=".gitignore updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/products/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/products/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/RandomStorePopulator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store/target/classes/store/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/StoreHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/StoreHelper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +50,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/AusraUrnezaite/Downloads/onlinestore-pavel-kostoglod-main",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AusraUrnezaite/Downloads/onlinestore-pavel-kostoglod-main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -145,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652178227300</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=".gitignore updated">
+      <created>1652190474830</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652190474830</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +174,7 @@
     <MESSAGE value="changes in domain classes" />
     <MESSAGE value="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;" />
     <MESSAGE value="RandomStorePopulator and StoreHelper added" />
-    <option name="LAST_COMMIT_MESSAGE" value="RandomStorePopulator and StoreHelper added" />
+    <MESSAGE value=".gitignore updated" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore updated" />
   </component>
 </project>
