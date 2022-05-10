@@ -20,11 +20,7 @@ public class Store {
         return categoryList;
     }
 
-    public void setCategoryList(List<Category> categoryList) {
-        this.categoryList = categoryList;
-    }
-
-    public void printAllCategories() {
+    public void printCategories() {
         categoryList.toString().replaceAll("\\[|\\]", "");
     }
 

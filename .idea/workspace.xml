@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;">
-      <change afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/categories/CategoryNames.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/BikeCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/CategoryNames.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/MilkCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/target/classes/categories/PhoneCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/target/classes/products/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/RandomStorePopulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/target/classes/store/RandomStorePopulator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/RandomStorePopulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/BikeCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/MilkCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/PhoneCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/PhoneCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/CategoryNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/CategoryNames.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/RandomStorePopulator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -139,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652098329175</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;">
+      <created>1652167713296</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652167713296</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

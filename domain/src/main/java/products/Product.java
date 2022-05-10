@@ -2,10 +2,10 @@ package products;
 
 public class Product {
     private String name;
-    private int rate;
+    private double rate;
     private double price;
 
-    public Product(String name, int rate, double price) {
+    public Product(String name, double rate, double price) {
         this.name = name;
         this.rate = rate;
         this.price = price;
@@ -15,7 +15,7 @@ public class Product {
         return name;
     }
 
-    public int getRate() {
+    public double getRate() {
         return rate;
     }
 
