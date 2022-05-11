@@ -12,13 +12,13 @@ public class RandomStorePopulator {
     public String randomProductName(CategoryNames category) {
         switch (category) {
             case BIKE:
-                return faker.color().name();
+                return faker.aviation().aircraft();
             case PHONE:
                 return faker.space().planet();
             case MILK:
                 return faker.food().fruit();
             default:
-                return null;
+                return faker.color().name();
         }
     }
 
