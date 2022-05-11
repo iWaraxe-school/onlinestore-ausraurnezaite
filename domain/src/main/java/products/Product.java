@@ -24,6 +24,6 @@ public class Product {
     }
 
     public String toString() {
-        return ("Name: " + name + ", Rate: " + rate + ", Price: " + price);
+        return ("Name: " + name + ", Rate: " + rate + ", Price: " + price + "€");
     }
 }

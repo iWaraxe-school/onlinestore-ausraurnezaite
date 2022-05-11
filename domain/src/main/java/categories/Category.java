@@ -36,6 +36,6 @@ public abstract class Category {
 
     @Override
     public String toString() {
-        return "Category: name '" + name + "' , product list: " + productList.toString().replaceAll("\\[|\\]", "") + ".";
+        return "Category: name '" + name + "' , product list: " +productList.toString().replaceAll("\\[|\\]", "").replaceAll("(Name: )", "\n \t Name: " ) + ".";
     }
 }

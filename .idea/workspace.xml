@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="got fixed some issues">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment=".gitignore moved into root directory;&#10;improved printing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/products/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/products/Product.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +59,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -164,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652248982318</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="got fixed some mistakes">
+      <created>1652249521273</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652249521273</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".gitignore moved into root directory;&#10;improved printing">
+      <created>1652259116027</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259116027</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +211,8 @@
     <MESSAGE value=".gitignore updated" />
     <MESSAGE value=".gitignore updated;&#10;dependencies added;" />
     <MESSAGE value="got fixed some issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="got fixed some issues" />
+    <MESSAGE value="got fixed some mistakes" />
+    <MESSAGE value=".gitignore moved into root directory;&#10;improved printing" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore moved into root directory;&#10;improved printing" />
   </component>
 </project>
