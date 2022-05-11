@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="got fixed some issues">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="got fixed some mistakes">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +61,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -164,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652248982318</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="got fixed some mistakes">
+      <created>1652249521273</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652249521273</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +206,7 @@
     <MESSAGE value=".gitignore updated" />
     <MESSAGE value=".gitignore updated;&#10;dependencies added;" />
     <MESSAGE value="got fixed some issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="got fixed some issues" />
+    <MESSAGE value="got fixed some mistakes" />
+    <option name="LAST_COMMIT_MESSAGE" value="got fixed some mistakes" />
   </component>
 </project>
