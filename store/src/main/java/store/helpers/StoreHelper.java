@@ -33,6 +33,7 @@ public class StoreHelper {
                         populator.randomProductPrice());
                 entry.getKey().addProduct(product);
             }
+            this.store.addCategory(entry.getKey());
         }
     }
 

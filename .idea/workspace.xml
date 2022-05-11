@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment=".gitignore updated">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment=".gitignore updated;&#10;dependencies added;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/StoreHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/helpers/StoreHelper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +33,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="28kEQHLKFuzmS2GGO2sOZTi6UNR" />
   <component name="ProjectLevelVcsManager">
@@ -148,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652190474830</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=".gitignore updated;&#10;dependencies added;">
+      <created>1652193790216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652193790216</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +177,7 @@
     <MESSAGE value="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;" />
     <MESSAGE value="RandomStorePopulator and StoreHelper added" />
     <MESSAGE value=".gitignore updated" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore updated" />
+    <MESSAGE value=".gitignore updated;&#10;dependencies added;" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore updated;&#10;dependencies added;" />
   </component>
 </project>
