@@ -16,7 +16,8 @@ import org.reflections.scanners.SubTypesScanner;
 public class StoreHelper {
     Store store;
 
-    public StoreHelper() {
+    public StoreHelper(Store store) {
+        this.store = store;
     }
 
     public void fillStoreRandomly() {
@@ -32,6 +33,7 @@ public class StoreHelper {
                         populator.randomProductPrice());
                 entry.getKey().addProduct(product);
             }
+            this.store.addCategory(entry.getKey());
         }
     }
 
@@ -39,7 +41,7 @@ public class StoreHelper {
     public static Map<Category, Integer> createProductListToAdd() {
         Map<Category, Integer> productsToAdd = new HashMap<>();
 
-        Reflections reflections = new Reflections("domain.categories", new SubTypesScanner());
+        Reflections reflections = new Reflections("categories", new SubTypesScanner());
 
         //Get all existing subtypes of category
         Set<Class<? extends Category>> subTypes = reflections.getSubTypesOf(Category.class);
