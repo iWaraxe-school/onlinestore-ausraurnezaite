@@ -21,16 +21,21 @@ public class Store {
     }
 
     public void printCategories() {
-        System.out.println(categoryList.toString().replaceAll("\\[|\\]", ""));
+        String categories = "";
+        for (Category category : categoryList) {
+            categories += category.getName() + "\n";
+        }
+        System.out.println(categories);
+//        System.out.println(categoryList.toString().replaceAll("\\[|\\]", ""));
     }
 
     @Override
     public String toString() {
-        String categories = "";
+        String categoriesFull = "";
         for (Category category : categoryList) {
-            categories += category.toString()+"\n";
+            categoriesFull += category.toString() + "\n";
         }
-        return categories;
+        return categoriesFull;
 //        return categoryList.toString().replaceAll("\\[|\\]","");
     }
 }
