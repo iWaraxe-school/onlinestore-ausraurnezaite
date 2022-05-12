@@ -63,8 +63,5 @@ public class StoreHelper {
             }
         }
         return productsToAdd;
-
     }
-
-
 }
