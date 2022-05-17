@@ -12,11 +12,6 @@ import java.util.Map;
 public class ProductComparator implements Comparator<Product> {
     public Map<String, String> sortTypesMap;
 
-    public ProductComparator(Map<String, String> sortTypesMap) {
-        this.sortTypesMap = sortTypesMap;
-
-    }
-
     @Override
     public int compare(Product p1, Product p2) {
         return p1.getName().compareTo(p2.getName());
@@ -39,7 +34,7 @@ public class ProductComparator implements Comparator<Product> {
         return value.equals(SortOrder.ASC.toString());
     }
 
-    public List<Product> sortProducts(List<Product> products) {
+    public List<Product> sortProducts(List<Product> products, Map<String, String> sortTypesMap) {
         List<Product> sortedProducts = new ArrayList<>(products);
         for (Map.Entry<String, String> entry : sortTypesMap.entrySet()) {
             sortedProducts.sort(getComparator(entry.getKey(), entry.getValue()));

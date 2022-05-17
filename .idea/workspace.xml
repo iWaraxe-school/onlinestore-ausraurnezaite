@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="XMLParser implemented">
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/comparators/ProductComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/priceASC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/priceDESC.xml" afterDir="false" />
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/parser/Comparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/parser/SortTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/SortOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/parser/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/comparators/ProductComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/comparators/ProductComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/target/classes/store/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652259421787</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator.">
+      <created>1652778069182</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652778069182</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +233,8 @@
     <MESSAGE value="got fixed some issues" />
     <MESSAGE value="got fixed some mistakes" />
     <MESSAGE value=".gitignore moved into root directory;&#10;improved printing" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore moved into root directory;&#10;improved printing" />
+    <MESSAGE value="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator." />
+    <option name="LAST_COMMIT_MESSAGE" value="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

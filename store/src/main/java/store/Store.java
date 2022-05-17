@@ -53,7 +53,7 @@ public class Store {
 
     public List<Product> getTopFiveProductList() {
         Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceDESC.xml");
-        List<Product> sorted = new ProductComparator(sortTypesMap).sortProducts(getAllProducts()).subList(0, 5);
+        List<Product> sorted = new ProductComparator().sortProducts(getAllProducts(), sortTypesMap).subList(0, 5);
         return sorted;
     }
 
@@ -65,7 +65,7 @@ public class Store {
 
     public List<Product> getAllProductsByPriceListASC() {
         Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceASC.xml");
-        List<Product> sorted = new ProductComparator(sortTypesMap).sortProducts(getAllProducts());
+        List<Product> sorted = new ProductComparator().sortProducts(getAllProducts(), sortTypesMap);
         return sorted;
     }
 
@@ -82,7 +82,7 @@ public class Store {
         categories.forEach(category -> {
             stringBuilder.append("Category: " + category.getName() + " Products:");
             List<Product> products = category.getProductList();
-            List<Product> sortedProductsInCategory = new ProductComparator(sortTypesMap).sortProducts(products);
+            List<Product> sortedProductsInCategory = new ProductComparator().sortProducts(products, sortTypesMap);
             stringBuilder.append(sortedProductsInCategory.toString().replaceAll("\\[|\\]", "").replaceAll("(Name: )", "\n \t Name: ") + ".\n");
 //            sortedProductsInCategory.forEach(product -> stringBuilder.append(product + "\n"));
         });
