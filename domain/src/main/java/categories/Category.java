@@ -4,6 +4,7 @@ import products.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Category {
     private CategoryNames name;
@@ -26,6 +27,7 @@ public abstract class Category {
         return productList;
     }
 
+
     public void setProductList(List<Product> productList) {
         this.productList = productList;
     }
@@ -34,8 +36,9 @@ public abstract class Category {
         this.name = name;
     }
 
+
     @Override
     public String toString() {
-        return "Category: name '" + name + "' , product list: " +productList.toString().replaceAll("\\[|\\]", "").replaceAll("(Name: )", "\n \t Name: " ) + ".";
+        return "Category: name '" + name + "' , product list: " + productList.toString().replaceAll("\\[|\\]", "").replaceAll("(Name: )", "\n \t Name: ") + ".";
     }
 }

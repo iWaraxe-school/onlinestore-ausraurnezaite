@@ -1,5 +1,5 @@
 package store.parser;
 
-public enum SortTypes {
+public enum SortOrder {
     ASC, DESC
 }

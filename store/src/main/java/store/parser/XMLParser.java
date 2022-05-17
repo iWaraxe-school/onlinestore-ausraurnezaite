@@ -12,12 +12,13 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class XMLParser {
-    public static Map<String, String> getSortTypes() {
+    public static Map<String, String>  getSortTypes(String xmlPath) {
         LinkedHashMap<String, String> sortTypesMap = new LinkedHashMap<>();
-        File configFile = new File("C:/Users/AusraUrnezaite/IdeaProjects/onlinestore-ausraurnezaite/store/src/main/resources/config.xml");
+        File configFile = new File(xmlPath);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
         try {
@@ -29,7 +30,7 @@ public class XMLParser {
                 Node sortTypeNode = sortTypesNodesList.item(i);
                 if (sortTypeNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element sortTypeElement = (Element) sortTypeNode;
-                    sortTypesMap.put(sortTypeElement.getTagName(), sortTypeElement.getTextContent());
+                    sortTypesMap.put(sortTypeElement.getTagName().toLowerCase(Locale.ROOT), sortTypeElement.getTextContent().toUpperCase());
                 }
             }
         } catch (ParserConfigurationException e) {

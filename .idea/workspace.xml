@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment=".gitignore moved into root directory;&#10;improved printing">
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/Comparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/SortTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/XMLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/config.xml" afterDir="false" />
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="XMLParser implemented">
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/comparators/ProductComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/resources/priceASC.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/resources/priceDESC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/categories/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/parser/Comparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/parser/SortTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/SortOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/parser/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/parser/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/store/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,13 +63,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/AusraUrnezaite/Downloads/pvz/onlinestore-MarinaKrasyuk-main",
+    "last_opened_file_path": "C:/Users/AusraUrnezaite/IdeaProjects/onlinestore-ausraurnezaite/store/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite\store\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite" />
     </key>
@@ -71,6 +80,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="store.comparators" />
       <recent name="categories" />
     </key>
   </component>
@@ -226,5 +236,12 @@
     <MESSAGE value="got fixed some mistakes" />
     <MESSAGE value=".gitignore moved into root directory;&#10;improved printing" />
     <option name="LAST_COMMIT_MESSAGE" value=".gitignore moved into root directory;&#10;improved printing" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="sortTypesMap" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
