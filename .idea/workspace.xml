@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Implemented Interaction">
+      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/Interaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="28kEQHLKFuzmS2GGO2sOZTi6UNR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/AusraUrnezaite/IdeaProjects/onlinestore-ausraurnezaite/store/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite\store\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="store.comparators" />
+      <recent name="categories" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="StoreApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="consoleApp.StoreApp" />
+      <module name="consoleApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="consoleApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StoreApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="" />
+      <created>1651752167615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651752167615</updated>
+    </task>
+    <task id="LOCAL-00001" summary="created domain classes">
+      <created>1652096737446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652096737446</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created domain classes">
+      <created>1652096859767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652096859767</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changes in domain classes">
+      <created>1652098038360</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652098038360</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changes in domain classes">
+      <created>1652098329175</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652098329175</updated>
+    </task>
+    <task id="LOCAL-00005" summary="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;">
+      <created>1652167713296</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652167713296</updated>
+    </task>
+    <task id="LOCAL-00006" summary="RandomStorePopulator and StoreHelper added">
+      <created>1652178227300</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652178227300</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".gitignore updated">
+      <created>1652190474830</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652190474830</updated>
+    </task>
+    <task id="LOCAL-00008" summary=".gitignore updated;&#10;dependencies added;">
+      <created>1652193790216</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652193790216</updated>
+    </task>
+    <task id="LOCAL-00009" summary="got fixed some issues">
+      <created>1652248395265</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652248395265</updated>
+    </task>
+    <task id="LOCAL-00010" summary="got fixed some issues">
+      <created>1652248982318</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652248982318</updated>
+    </task>
+    <task id="LOCAL-00011" summary="got fixed some mistakes">
+      <created>1652249521273</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652249521273</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".gitignore moved into root directory;&#10;improved printing">
+      <created>1652259116027</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259116027</updated>
+    </task>
+    <task id="LOCAL-00013" summary=".gitignore moved into root directory;&#10;improved printing">
+      <created>1652259421787</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259421787</updated>
+    </task>
+    <task id="LOCAL-00014" summary="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator.">
+      <created>1652778069182</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652778069182</updated>
+    </task>
+    <task id="LOCAL-00015" summary="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator().sortProducts(List&lt;Products&gt; productsList, Map&lt;String, String&gt; sortTypesMap): sorted List&lt;Product&gt;&#10;new ProductComparator().getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator.">
+      <created>1652782675070</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652782675070</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="created domain classes" />
+    <MESSAGE value="changes in domain classes" />
+    <MESSAGE value="some changes in domain classes;&#10;Store and RandomStorePopulator classes created but not completely implemented;" />
+    <MESSAGE value="RandomStorePopulator and StoreHelper added" />
+    <MESSAGE value=".gitignore updated" />
+    <MESSAGE value=".gitignore updated;&#10;dependencies added;" />
+    <MESSAGE value="got fixed some issues" />
+    <MESSAGE value="got fixed some mistakes" />
+    <MESSAGE value=".gitignore moved into root directory;&#10;improved printing" />
+    <MESSAGE value="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator." />
+    <MESSAGE value="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator().sortProducts(List&lt;Products&gt; productsList, Map&lt;String, String&gt; sortTypesMap): sorted List&lt;Product&gt;&#10;new ProductComparator().getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator." />
+    <MESSAGE value="Implemented Interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Interaction" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="sortTypesMap" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
