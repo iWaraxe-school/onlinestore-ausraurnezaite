@@ -12,10 +12,23 @@ import java.util.stream.Collectors;
 
 public class Store {
     private List<Category> categoryList;
+    private static volatile Store store;
 
-    public Store() {
+    private Store() {
         this.categoryList = new ArrayList<>();
     }
+
+    public static Store getInstance() {
+        if (store == null) {
+            synchronized (Store.class) {
+                if (store == null) {
+                    store = new Store();
+                }
+            }
+        }
+        return store;
+    }
+
 
     public void addCategory(Category category) {
         this.categoryList.add(category);

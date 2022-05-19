@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Implemented Interaction">
-      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/AusraUrnezaite/IdeaProjects/onlinestore-ausraurnezaite/store/src/main/resources",
+    "last_opened_file_path": "D:/it/NBP/multi",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -209,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652782675070</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implemented Interaction">
+      <created>1652786617914</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652786617914</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
