@@ -18,6 +18,7 @@ public class Store {
         this.categoryList = new ArrayList<>();
     }
 
+//  Thread-safe Singleton with lazy loading
     public static Store getInstance() {
         if (store == null) {
             synchronized (Store.class) {
@@ -28,7 +29,6 @@ public class Store {
         }
         return store;
     }
-
 
     public void addCategory(Category category) {
         this.categoryList.add(category);

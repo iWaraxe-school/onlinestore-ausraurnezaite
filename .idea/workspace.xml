@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Implemented Interaction">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Thread-safe Singleton with lazy loading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/products/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/it/NBP/multi",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/it/NBP/multi&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AusraUrnezaite\IdeaProjects\onlinestore-ausraurnezaite\store\src\main\resources" />
@@ -215,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652786617914</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Thread-safe Singleton with lazy loading">
+      <created>1652940811958</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652940811958</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +258,8 @@
     <MESSAGE value="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).sortProducts(List&lt;Products&gt; productsList): sorted List&lt;Product&gt;&#10;new ProductComparator(Map&lt;String, String&gt; sortTypesMap).getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator." />
     <MESSAGE value="XMLParser changed:&#10;getSortTypes(String xmlPath): Map&lt;String, String&gt; &#10;so you have to provide a path as a parameter in order to use different xml files for sorting;&#10;&#10;Comparator implemented. It can be used in different ways:&#10;new ProductComparator().sortProducts(List&lt;Products&gt; productsList, Map&lt;String, String&gt; sortTypesMap): sorted List&lt;Product&gt;&#10;new ProductComparator().getComparator(String key, String value): Comparator&lt;Product&gt;&#10;&#10;Top5 products and store sorted by categories and prices were implemented in Store class using the same universal ProductComparator." />
     <MESSAGE value="Implemented Interaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Interaction" />
+    <MESSAGE value="Thread-safe Singleton with lazy loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thread-safe Singleton with lazy loading" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
