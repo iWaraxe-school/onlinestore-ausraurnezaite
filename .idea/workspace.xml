@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Builder pattern + README.md">
-      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/AllProductsByPriceCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/CreateOrderCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/Top5Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/comparators/helpers/StoreHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="The command pattern used in Interaction class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/Interaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/RandomStorePopulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/comparators/helpers/RandomStorePopulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/store/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/RandomStorePopulator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/store/helpers/StoreHelper.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -247,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652965147386</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="The command pattern used in Interaction class">
+      <created>1653570271559</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1653570271559</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +275,8 @@
     <MESSAGE value="Implemented Interaction" />
     <MESSAGE value="Thread-safe Singleton with lazy loading" />
     <MESSAGE value="Builder pattern + README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Builder pattern + README.md" />
+    <MESSAGE value="The command pattern used in Interaction class" />
+    <option name="LAST_COMMIT_MESSAGE" value="The command pattern used in Interaction class" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -9,7 +9,6 @@ public class StoreApp {
         Store store = Store.getInstance();
         StoreHelper helper = new StoreHelper(store);
         helper.fillStoreRandomly();
-        helper.printCategories();
         Interaction.interact(helper);
     }
 }
