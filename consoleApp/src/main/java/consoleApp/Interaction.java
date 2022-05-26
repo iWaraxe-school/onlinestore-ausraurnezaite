@@ -1,25 +1,29 @@
 package consoleApp;
 
-import store.Store;
+import consoleApp.commands.AllProductsByPriceCommand;
+import consoleApp.commands.CreateOrderCommand;
+import consoleApp.commands.Top5Command;
+import store.comparators.helpers.StoreHelper;
 
 import java.util.Scanner;
 
 public class Interaction {
-    public static void interact(Store store) {
+    public static void interact(StoreHelper helper) {
 
         Scanner sc = new Scanner(System.in);
         String action = "";
         while (!"quit".equalsIgnoreCase(action)) {
-            System.out.println("Choose the action:  sort/top/quit: ");
+            System.out.println("Choose the action:  sort/top/order/quit: ");
             action = sc.nextLine();
             switch (action) {
                 case "sort":
-                    store.allProductsByPrice();
-                    store.printSortedStore();
+                    new AllProductsByPriceCommand(helper).execute();
                     break;
                 case "top":
-                    store.top5();
+                    new Top5Command(helper).execute();
                     break;
+                case "order":
+                    new CreateOrderCommand(helper).execute();
                 case "quit":
                     System.out.println("bye");
                     break;
