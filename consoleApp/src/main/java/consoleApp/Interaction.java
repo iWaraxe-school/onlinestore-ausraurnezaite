@@ -24,6 +24,7 @@ public class Interaction {
                     break;
                 case "order":
                     new CreateOrderCommand(helper).execute();
+                    break;
                 case "quit":
                     System.out.println("bye");
                     break;
