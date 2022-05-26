@@ -1,14 +1,10 @@
 package store;
 
 import categories.Category;
-import products.Product;
-import store.comparators.ProductComparator;
-import store.parser.XMLParser;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 
 public class Store {
     private List<Category> categoryList;

@@ -66,7 +66,6 @@ public class StoreHelper {
         return productsToAdd;
     }
 
-
     public List<Product> getAllProducts() {
         return store.getCategoryList().stream()
                 .map(category -> category.getProductList())
@@ -119,6 +118,4 @@ public class StoreHelper {
         });
         System.out.println(stringBuilder);
     }
-
-
 }
