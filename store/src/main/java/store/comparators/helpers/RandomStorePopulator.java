@@ -1,10 +1,11 @@
-package store.helpers;
+package store.comparators.helpers;
 
 import categories.CategoryNames;
 import com.github.javafaker.Faker;
 
 public class RandomStorePopulator {
     Faker faker = new Faker();
+
 
     public RandomStorePopulator() {
     }
