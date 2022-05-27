@@ -1,6 +1,6 @@
 package consoleApp.commands;
 
-import store.comparators.helpers.StoreHelper;
+import store.helpers.StoreHelper;
 
 public class Top5Command implements Command{
     StoreHelper helper;

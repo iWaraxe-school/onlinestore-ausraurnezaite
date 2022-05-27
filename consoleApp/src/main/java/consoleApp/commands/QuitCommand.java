@@ -2,15 +2,16 @@ package consoleApp.commands;
 
 import store.helpers.StoreHelper;
 
-public class CreateOrderCommand implements Command{
+public class QuitCommand implements Command {
     StoreHelper helper;
 
-    public CreateOrderCommand(StoreHelper helper) {
+    public QuitCommand(StoreHelper helper) {
         this.helper = helper;
     }
 
     @Override
     public void execute() {
-        helper.createOrder();
+        helper.shutDownExecutorService();
+        System.out.println("bye");
     }
 }

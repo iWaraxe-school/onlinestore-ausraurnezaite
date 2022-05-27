@@ -1,4 +1,4 @@
-package store.comparators.helpers;
+package store.helpers;
 
 import categories.Category;
 import products.Product;
@@ -6,6 +6,9 @@ import store.Store;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 import org.reflections.Reflections;
@@ -14,11 +17,9 @@ import store.comparators.ProductComparator;
 import store.parser.XMLParser;
 
 public class StoreHelper {
-    Store store;
+    Store store = Store.getInstance();
+    public ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-    public StoreHelper(Store store) {
-        this.store = store;
-    }
 
     public void fillStoreRandomly() {
         RandomStorePopulator populator = new RandomStorePopulator();
@@ -37,7 +38,6 @@ public class StoreHelper {
             this.store.addCategory(entry.getKey());
         }
     }
-
 
     public static Map<Category, Integer> createProductListToAdd() {
         Map<Category, Integer> productsToAdd = new HashMap<>();
@@ -117,5 +117,25 @@ public class StoreHelper {
             stringBuilder.append(sortedProductsInCategory.toString().replaceAll("\\[|\\]", "").replaceAll("(Name: )", "\n \t Name: ") + ".\n");
         });
         System.out.println(stringBuilder);
+    }
+
+    public void createOrder() {
+        executorService.execute(new Order(getRandomProductsList()));
+    }
+
+    public List<Product> getRandomProductsList() {
+        List<Product> randomProducts = new ArrayList<>();
+        int amountOfProductsOrdering = new Random().nextInt(5) + 1;
+        List<Product> allProducts = getAllProducts();
+        for (int i = 0; i < amountOfProductsOrdering; i++) {
+            int randomProductNumber = new Random().nextInt(allProducts.size());
+            Product randomProduct = allProducts.get(randomProductNumber);
+            randomProducts.add(randomProduct);
+        }
+        return randomProducts;
+    }
+
+    public void shutDownExecutorService(){
+        executorService.shutdown();
     }
 }

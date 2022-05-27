@@ -1,9 +1,7 @@
 package consoleApp;
 
-import consoleApp.commands.AllProductsByPriceCommand;
-import consoleApp.commands.CreateOrderCommand;
-import consoleApp.commands.Top5Command;
-import store.comparators.helpers.StoreHelper;
+import consoleApp.commands.*;
+import store.helpers.StoreHelper;
 
 import java.util.Scanner;
 
@@ -13,10 +11,13 @@ public class Interaction {
         Scanner sc = new Scanner(System.in);
         String action = "";
         while (!"quit".equalsIgnoreCase(action)) {
-            System.out.println("Choose the action:  sort/top/order/quit: ");
-            action = sc.nextLine();
+            System.out.println("Choose the action:  sort/list/top/order/quit: ");
+            action = sc.nextLine().toLowerCase();
             switch (action) {
                 case "sort":
+                    new CategoriesSortedByPriceCommand(helper).execute();
+                    break;
+                case "list":
                     new AllProductsByPriceCommand(helper).execute();
                     break;
                 case "top":
@@ -26,7 +27,7 @@ public class Interaction {
                     new CreateOrderCommand(helper).execute();
                     break;
                 case "quit":
-                    System.out.println("bye");
+                    new QuitCommand(helper).execute();
                     break;
                 default:
                     System.out.println("Unexpected command: " + action);
