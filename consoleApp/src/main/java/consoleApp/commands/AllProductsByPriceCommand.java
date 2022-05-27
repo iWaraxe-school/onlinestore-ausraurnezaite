@@ -1,6 +1,6 @@
 package consoleApp.commands;
 
-import store.comparators.helpers.StoreHelper;
+import store.helpers.StoreHelper;
 
 public class AllProductsByPriceCommand implements Command {
     StoreHelper helper;

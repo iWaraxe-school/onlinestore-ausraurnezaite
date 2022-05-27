@@ -2,15 +2,15 @@ package consoleApp.commands;
 
 import store.helpers.StoreHelper;
 
-public class CreateOrderCommand implements Command{
+public class CategoriesSortedByPriceCommand implements Command {
     StoreHelper helper;
 
-    public CreateOrderCommand(StoreHelper helper) {
+    public CategoriesSortedByPriceCommand(StoreHelper helper) {
         this.helper = helper;
     }
 
     @Override
     public void execute() {
-        helper.createOrder();
+        helper.printSortedStore();
     }
 }

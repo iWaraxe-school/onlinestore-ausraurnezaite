@@ -1,4 +1,4 @@
-package store.comparators.helpers;
+package store.helpers;
 
 import categories.CategoryNames;
 import com.github.javafaker.Faker;
