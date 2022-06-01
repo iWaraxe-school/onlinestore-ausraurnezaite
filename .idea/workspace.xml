@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Implemented create order functionality. Random amount of random existing products from the store are used for the order.&#10;Using Executors.newFixedThreadPool with maximum of 3 threads to process the orders.&#10;&#10;The Purchased Products Clean Up function was implemented using ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1).&#10;Collection will be cleaned every 2 min using scheduleAtFixedRate(cleaner, 120, 120, SECONDS).&#10;&#10;Added QuitCommand.">
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/DBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/init.sql" afterDir="false" />
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="Categories and products are stored in DB.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/Interaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/AllProductsByPriceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/AllProductsByPriceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/CategoriesSortedByPriceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/CategoriesSortedByPriceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/CreateOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/CreateOrderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/QuitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/QuitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/Top5Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/commands/Top5Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/categories/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/PurchasedProductsCleanUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/PurchasedProductsCleanUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/RandomStorePopulator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/resources/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/resources/init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653643503825</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Categories and products are stored in DB.">
+      <created>1654072471390</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1654072471390</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,7 +314,8 @@
     <MESSAGE value="Builder pattern + README.md" />
     <MESSAGE value="The command pattern used in Interaction class" />
     <MESSAGE value="Implemented create order functionality. Random amount of random existing products from the store are used for the order.&#10;Using Executors.newFixedThreadPool with maximum of 3 threads to process the orders.&#10;&#10;The Purchased Products Clean Up function was implemented using ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1).&#10;Collection will be cleaned every 2 min using scheduleAtFixedRate(cleaner, 120, 120, SECONDS).&#10;&#10;Added QuitCommand." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented create order functionality. Random amount of random existing products from the store are used for the order.&#10;Using Executors.newFixedThreadPool with maximum of 3 threads to process the orders.&#10;&#10;The Purchased Products Clean Up function was implemented using ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1).&#10;Collection will be cleaned every 2 min using scheduleAtFixedRate(cleaner, 120, 120, SECONDS).&#10;&#10;Added QuitCommand." />
+    <MESSAGE value="Categories and products are stored in DB." />
+    <option name="LAST_COMMIT_MESSAGE" value="Categories and products are stored in DB." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
