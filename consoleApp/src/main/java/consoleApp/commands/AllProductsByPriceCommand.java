@@ -1,11 +1,11 @@
 package consoleApp.commands;
 
-import store.helpers.StoreHelper;
+import store.helpers.Helper;
 
 public class AllProductsByPriceCommand implements Command {
-    StoreHelper helper;
+    Helper helper;
 
-    public AllProductsByPriceCommand(StoreHelper helper) {
+    public AllProductsByPriceCommand(Helper helper) {
         this.helper = helper;
     }
 

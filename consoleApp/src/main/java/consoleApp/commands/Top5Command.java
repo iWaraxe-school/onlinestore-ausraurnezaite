@@ -1,11 +1,11 @@
 package consoleApp.commands;
 
-import store.helpers.StoreHelper;
+import store.helpers.Helper;
 
 public class Top5Command implements Command{
-    StoreHelper helper;
+   Helper helper;
 
-    public Top5Command(StoreHelper helper) {
+    public Top5Command(Helper helper) {
         this.helper = helper;
     }
 

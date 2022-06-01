@@ -4,7 +4,6 @@ import products.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public abstract class Category {
     private CategoryNames name;

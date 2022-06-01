@@ -1,11 +1,11 @@
 package consoleApp.commands;
 
-import store.helpers.StoreHelper;
+import store.helpers.Helper;
 
-public class CreateOrderCommand implements Command{
-    StoreHelper helper;
+public class CreateOrderCommand implements Command {
+    Helper helper;
 
-    public CreateOrderCommand(StoreHelper helper) {
+    public CreateOrderCommand(Helper helper) {
         this.helper = helper;
     }
 
