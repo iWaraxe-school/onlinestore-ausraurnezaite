@@ -1,11 +1,14 @@
 package consoleApp.commands;
 
-import store.helpers.StoreHelper;
+import store.helpers.DBHelper;
+import store.helpers.Helper;
+
+import java.sql.SQLException;
 
 public class QuitCommand implements Command {
-    StoreHelper helper;
+    Helper helper;
 
-    public QuitCommand(StoreHelper helper) {
+    public QuitCommand(Helper helper) {
         this.helper = helper;
     }
 
@@ -13,5 +16,13 @@ public class QuitCommand implements Command {
     public void execute() {
         helper.shutDownExecutorService();
         System.out.println("bye");
+
+        if (helper instanceof DBHelper) {
+            try {
+                DBHelper.connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

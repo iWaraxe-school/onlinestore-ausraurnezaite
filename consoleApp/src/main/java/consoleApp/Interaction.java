@@ -1,12 +1,12 @@
 package consoleApp;
 
 import consoleApp.commands.*;
-import store.helpers.StoreHelper;
+import store.helpers.Helper;
 
 import java.util.Scanner;
 
 public class Interaction {
-    public static void interact(StoreHelper helper) {
+    public static void interact(Helper helper) {
 
         Scanner sc = new Scanner(System.in);
         String action = "";

@@ -16,22 +16,21 @@ import org.reflections.scanners.SubTypesScanner;
 import store.comparators.ProductComparator;
 import store.parser.XMLParser;
 
-public class StoreHelper {
+public class StoreHelper implements Helper {
     Store store = Store.getInstance();
-    public ExecutorService executorService = Executors.newFixedThreadPool(3);
+
 
 
     public void fillStoreRandomly() {
-        RandomStorePopulator populator = new RandomStorePopulator();
         Map<Category, Integer> categoryProductsMapToAdd = createProductListToAdd();
 
         for (Map.Entry<Category, Integer> entry : categoryProductsMapToAdd.entrySet()) {
             for (int i = 0; i < entry.getValue(); i++) {
 
                 Product product = new Product.Builder()
-                        .name(populator.randomProductName(entry.getKey().getName()))
-                        .rate(populator.randomProductRate())
-                        .price(populator.randomProductPrice())
+                        .name(getRandomProductName(entry.getKey().getName()))
+                        .rate(getRandomProductRate())
+                        .price(getRandomProductPrice())
                         .build();
                 entry.getKey().addProduct(product);
             }
@@ -39,7 +38,7 @@ public class StoreHelper {
         }
     }
 
-    public static Map<Category, Integer> createProductListToAdd() {
+    private static Map<Category, Integer> createProductListToAdd() {
         Map<Category, Integer> productsToAdd = new HashMap<>();
 
         Reflections reflections = new Reflections("categories", new SubTypesScanner());
@@ -67,7 +66,7 @@ public class StoreHelper {
     }
 
     public List<Product> getAllProducts() {
-        return store.getCategoryList().stream()
+        return store.getCategoriesList().stream()
                 .map(category -> category.getProductList())
                 .flatMap(list -> list.stream())
                 .collect(Collectors.toList());
@@ -75,7 +74,7 @@ public class StoreHelper {
 
     public void printCategories() {
         String categories = "";
-        for (Category category : store.getCategoryList()) {
+        for (Category category : store.getCategoriesList()) {
             categories += category.getName() + "\n";
         }
         System.out.println(categories);
@@ -108,7 +107,7 @@ public class StoreHelper {
 
     public void printSortedStore() {
         Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceASC.xml");
-        List<Category> categories = new ArrayList<>(store.getCategoryList());
+        List<Category> categories = new ArrayList<>(store.getCategoriesList());
         StringBuilder stringBuilder = new StringBuilder("All categories sorted by price: \n");
         categories.forEach(category -> {
             stringBuilder.append("Category: " + category.getName() + " Products:");
@@ -133,9 +132,5 @@ public class StoreHelper {
             randomProducts.add(randomProduct);
         }
         return randomProducts;
-    }
-
-    public void shutDownExecutorService(){
-        executorService.shutdown();
     }
 }
