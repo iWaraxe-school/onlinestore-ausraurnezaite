@@ -68,6 +68,15 @@ public class Store {
         purchasedProductsList.clear();
     }
 
+//    public void removeProductFromPurchasedProducts(String name) {
+//        for (Product product : purchasedProductsList) {
+//            if (name.equalsIgnoreCase(product.getName())) {
+//                purchasedProductsList.remove(product);
+//                break;
+//            }
+//        }
+//    }
+
     @Override
     public String toString() {
         String categoriesFull = "All products in store: \n";

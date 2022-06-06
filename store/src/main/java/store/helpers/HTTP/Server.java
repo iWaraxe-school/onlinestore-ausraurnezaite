@@ -14,6 +14,9 @@ public class Server {
     private static final String LIST = "/list";
     private static final String SORT = "/sort";
     private static final String TOP = "/top";
+    private static final String CART = "/cart";
+    private static final String ORDER = "/order";
+    private static final String REMOVE = "/remove";
 
     public static void startServer() {
         ServerSocket serverSocket = null;
@@ -54,6 +57,20 @@ public class Server {
                                 httpHelper.allProductsByPrice();
                             } else if (GET.equals(parts[0]) && TOP.equals(parts[1])) {
                                 httpHelper.top5();
+                            } else if (GET.equals(parts[0]) && CART.equals(parts[1])) {
+                                httpHelper.showCart();
+                            } else if (GET.equals(parts[0]) && parts[1].contains(ORDER)) {
+                                System.out.println(parts[1]);
+                                String[] order = parts[1].split("_");
+                                int productID = Integer.parseInt(order[1]);
+                                System.out.println(productID);
+                                httpHelper.createOrder(productID);
+                            }else if (GET.equals(parts[0]) && parts[1].contains(REMOVE)) {
+                                System.out.println(parts[1]);
+                                String[] order = parts[1].split("_");
+                                int cartID = Integer.parseInt(order[1]);
+                                System.out.println(cartID);
+                                httpHelper.removeFromCart((cartID));
                             }
 
                         } else {

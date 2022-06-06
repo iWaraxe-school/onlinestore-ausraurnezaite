@@ -27,7 +27,6 @@ public class PurchasedProductsCleanUp {
             }
         };
         //clearing purchasedProducts list every 2min.
-//        scheduler.scheduleAtFixedRate(cleaner, 120, 120, SECONDS);
-        scheduler.scheduleAtFixedRate(cleaner, 30, 20, SECONDS);    //testing
+        scheduler.scheduleAtFixedRate(cleaner, 120, 120, SECONDS);
     }
 }
