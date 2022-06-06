@@ -2,9 +2,8 @@ package store.helpers;
 
 import categories.CategoryNames;
 import com.github.javafaker.Faker;
-import products.Product;
 
-import java.util.List;
+import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

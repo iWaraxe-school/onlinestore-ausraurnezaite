@@ -48,8 +48,6 @@ public class DBHelper implements Helper {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 
     @Override
@@ -74,7 +72,6 @@ public class DBHelper implements Helper {
         try (Statement stmt = DBHelper.connection.createStatement()) {
             Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceASC.xml");
             for (Map.Entry<String, String> entry : sortTypesMap.entrySet()) {
-
                 ResultSet productsRS = stmt.executeQuery("select * from products order by " + entry.getKey() + " " + entry.getValue());
                 System.out.println("All products by price:");
                 while (productsRS.next()) {
@@ -107,7 +104,7 @@ public class DBHelper implements Helper {
         executorService.execute(new Order(getRandomProductsList()));
     }
 
-    public List<Product> getRandomProductsList() {
+    private List<Product> getRandomProductsList() {
         List<Product> randomProducts = new ArrayList<>();
         int amountOfProductsOrdering = new Random().nextInt(5) + 1;
 

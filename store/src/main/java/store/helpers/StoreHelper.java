@@ -6,9 +6,6 @@ import store.Store;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 import org.reflections.Reflections;
@@ -18,7 +15,6 @@ import store.parser.XMLParser;
 
 public class StoreHelper implements Helper {
     Store store = Store.getInstance();
-
 
 
     public void fillStoreRandomly() {
