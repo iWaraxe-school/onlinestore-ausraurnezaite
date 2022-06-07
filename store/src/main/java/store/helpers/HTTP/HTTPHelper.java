@@ -230,18 +230,9 @@ public class HTTPHelper implements Helper {
                 }
                 if (productsCount < 1) {
                     System.out.println("cart empty");
-                    bw.write("HTTP/1.1 200 OK\r\n");
-                    bw.write("\r\n");
-                    bw.write("<html>\r\n");
-                    bw.write("<body>\r\n");
                     bw.write("<h4>cart empty</h4>\r\n");
-                    bw.write("<button> <a href=\"/\">BACK</a></button>\r\n");
-                    bw.write("</body>\r\n");
-                    bw.write("</html>\r\n");
-                    bw.flush();
                 } else {
                     ResultSet productsRS = stmt.executeQuery("select * from cart join categories on cart.category_id = categories.id");
-                    System.out.println("Products in cart: ");
 
                     bw.write("<h4>Cart</h4>\r\n");
                     bw.write("<table>\r\n");
@@ -255,6 +246,7 @@ public class HTTPHelper implements Helper {
                     bw.write("</thead>\r\n");
                     bw.write("<tbody>\r\n");
 
+                    System.out.println("Products in cart: ");
                     while (productsRS.next()) {
                         System.out.println(productsRS.getString("categories.name") + " Name: " + productsRS.getString("name") + ", rate: " + productsRS.getDouble("rate") + " price: " + productsRS.getDouble("price"));
                         bw.write("<tr>\r\n");
@@ -269,7 +261,7 @@ public class HTTPHelper implements Helper {
                 e.printStackTrace();
             }
 
-            bw.write("<button> <a href=\"/\">BACK</a></button>\r\n");
+            bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
             bw.write("</body>\r\n");
             bw.write("</html>\r\n");
             bw.flush();
@@ -280,11 +272,15 @@ public class HTTPHelper implements Helper {
 
     public void removeFromCart(int cartID) throws IOException {
         try (Statement stmt = DBHelper.connection.createStatement()) {
-//            ResultSet productRS = stmt.executeQuery("select * from cart where id = " + cartID);
-//            if (productRS.next()){
-//                String name = productRS.getString("name");
+            ResultSet productRS = stmt.executeQuery("select * from cart where id = " + cartID);
+            if (productRS.next()) {
+                String name = productRS.getString("name");
+                double rate = productRS.getDouble("rate");
+                double price = productRS.getDouble("price");
+                System.out.println("Product removed from cart: Name: " + name + ", Rate: " + rate + ", Price: " + price + "€.");
+
 //                Store.getInstance().removeProductFromPurchasedProducts(name);
-//            }
+            }
             stmt.execute("delete from cart where id = " + cartID);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -295,6 +291,7 @@ public class HTTPHelper implements Helper {
         bw.write("<html>\r\n");
         bw.write("<body>\r\n");
         bw.write("<h4>Product removed from cart</h4>\r\n");
+        bw.write("<button> <a href=\"/cart\">BACK</a></button>\r\n");
         bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
         bw.write("</body>\r\n");
         bw.write("</html>\r\n");
@@ -307,7 +304,7 @@ public class HTTPHelper implements Helper {
             ResultSet productsRS = stmt.executeQuery("select * from products where id = " + productID);
             while (productsRS.next()) {
                 System.out.println("product added to cart:");
-                System.out.println("Name: " + productsRS.getString("name") + ", rate: " + productsRS.getDouble("rate") + " price: " + productsRS.getDouble("price"));
+                System.out.println("Name: " + productsRS.getString("name") + ", Rate: " + productsRS.getDouble("rate") + " Price: " + productsRS.getDouble("price") + "€.");
                 PreparedStatement insertProductToCart = DBHelper.connection.prepareStatement("INSERT INTO cart(category_id, product_id, name, rate, price) VALUES(?, ?, ?, ?, ?)");
                 insertProductToCart.setInt(1, productsRS.getInt("category_id"));
                 insertProductToCart.setInt(2, productID);
@@ -335,6 +332,7 @@ public class HTTPHelper implements Helper {
             bw.write("<body>\r\n");
             bw.write("<h4>Product added cart</h4>\r\n");
             bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
+            bw.write("<button> <a href=\"/cart\">CART</a></button>\r\n");
             bw.write("</body>\r\n");
             bw.write("</html>\r\n");
             bw.flush();
