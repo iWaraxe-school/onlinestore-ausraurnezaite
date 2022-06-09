@@ -1,7 +1,6 @@
 package store.helpers;
 
 import categories.Category;
-import com.github.javafaker.Cat;
 import products.Product;
 import store.Store;
 import store.parser.XMLParser;
@@ -18,8 +17,8 @@ public class DBHelper implements Helper {
     static {
         try {
             Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection("jdbc:h2:~/test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
-//            connection = DriverManager.getConnection("jdbc:h2:mem:test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
+//            connection = DriverManager.getConnection("jdbc:h2:~/test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
+            connection = DriverManager.getConnection("jdbc:h2:mem:test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }

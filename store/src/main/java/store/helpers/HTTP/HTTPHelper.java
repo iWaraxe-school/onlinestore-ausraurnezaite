@@ -8,7 +8,6 @@ import store.helpers.Helper;
 import store.helpers.Order;
 import store.parser.XMLParser;
 
-import javax.swing.*;
 import java.io.*;
 import java.net.Socket;
 import java.sql.*;
@@ -18,10 +17,12 @@ import java.util.Map;
 import java.util.Random;
 
 public class HTTPHelper implements Helper {
-    private static final String ROOT_DIR = "web";
-
     private static Socket socket;
     private static BufferedWriter bw;
+    public static boolean userLoggedIn = false;
+    public static int userID;
+    public static String userName;
+
 
     public HTTPHelper(Socket socket) throws IOException {
         this.socket = socket;
@@ -36,39 +37,47 @@ public class HTTPHelper implements Helper {
         bw.write("\r\n");
         bw.write("<html>\r\n");
         bw.write("<body>\r\n");
-        bw.write("<h4>BYE</h4>\r\n");
+        bw.write("<h4>Quit</h4>\r\n");
         bw.write("</body>\r\n");
         bw.write("</html>\r\n");
         bw.flush();
-
         try {
             DBHelper.connection.close();
+            socket.close();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
     public void showIndex() throws IOException {
-        try (
-                InputStream fis = new FileInputStream(ROOT_DIR + "/index.html");
-                Reader fr = new InputStreamReader(fis, "UTF-8");
-                BufferedReader fbr = new BufferedReader(fr)
-        ) {
-            bw.write("HTTP/1.1 200 OK\r\n");
-            bw.write("\r\n");
-            String fileLine;
-            while ((fileLine = fbr.readLine()) != null) {
-                bw.write(fileLine);
-                bw.write("\r\n");
-            }
-        } catch (FileNotFoundException ex) {
-            bw.write("HTTP/1.1 404 Not Found\r\n");
-            bw.write("\r\n");
-        } catch (IOException ex) {
-            bw.write("HTTP/1.1 500 Internal Server Error\r\n");
-            bw.write("\r\n");
 
+        bw.write("HTTP/1.1 200 OK\r\n");
+        bw.write("\r\n");
+
+        bw.write("<html>\r\n");
+        bw.write("<body>\r\n");
+        bw.write("<h1> ONLINE STORE </h1>\r\n");
+
+        if (userLoggedIn) {
+            bw.write("<h2>user: " + this.userName + " </h2>\r\n");
+            bw.write("<button><a href = \"cart\" > Cart </a ></button><br>\r\n");
+        } else {
+            bw.write("<button><a href=\"login\"> Log in </a ></button><br>\r\n");
+            bw.write("<button><a href=\"register\"> Register </a ></button><br>\r\n");
         }
+        bw.write("<button><a href = \"list\" > List all products </a ></button><br>\r\n");
+        bw.write("<button><a href = \"sort\" > List all categories sorted by price</a></button><br>\r\n");
+        bw.write("<button><a href = \"top\" > Top 5 </a ></button><br>\r\n");
+
+
+        if (userLoggedIn) {
+            bw.write("<button><a href = \"logout\" > Log out </a ></button><br>\r\n");
+        } else {
+            bw.write("<button><a href = \"quit\" > Quit </a ></button><br>\r\n");
+        }
+        bw.write("</body>\r\n");
+        bw.write("</html>\r\n");
+        bw.write("\r\n");
         bw.flush();
     }
 
@@ -100,7 +109,10 @@ public class HTTPHelper implements Helper {
                         System.out.println("Name: " + productsRS.getString("name") + ", rate: " + productsRS.getDouble("rate") + " price: " + productsRS.getDouble("price"));
                         bw.write("<tr>\r\n");
                         bw.write("<td>\r\n");
-                        bw.write("<td>" + productsRS.getString("name") + "<td>" + productsRS.getDouble("rate") + "<td>" + productsRS.getDouble("price") + "<td> <button><a href=\"order_" + productsRS.getInt("id") + "\">add to cart</a></button><br></td>" + "\r\n");
+                        bw.write("<td>" + productsRS.getString("name") + "<td>" + productsRS.getDouble("rate") + "<td>" + productsRS.getDouble("price") + "\r\n");
+                        if (userLoggedIn) {
+                            bw.write("<td><button><a href=\"order_" + productsRS.getInt("id") + "\">add to cart</a></button><br></td>\r\n");
+                        }
                         bw.write("</tr>\r\n");
                     }
                     bw.write("<tbody>\r\n");
@@ -117,7 +129,6 @@ public class HTTPHelper implements Helper {
             e.printStackTrace();
         }
     }
-
 
     public void printSortedStore() {
         try {
@@ -147,7 +158,10 @@ public class HTTPHelper implements Helper {
                         System.out.println(productsRS.getString("categories.name") + " Name: " + productsRS.getString("name") + ", rate: " + productsRS.getDouble("rate") + " price: " + productsRS.getDouble("price"));
                         bw.write("<tr>\r\n");
                         bw.write("<td>\r\n");
-                        bw.write("<td>" + productsRS.getString("categories.name") + "<td>" + productsRS.getString("name") + "<td>" + productsRS.getDouble("rate") + "<td>" + productsRS.getDouble("price") + "<td> <button><a href=\"order_" + productsRS.getInt("id") + "\">add to cart</a></button><br></td>" + "\r\n");
+                        bw.write("<td>" + productsRS.getString("categories.name") + "<td>" + productsRS.getString("name") + "<td>" + productsRS.getDouble("rate") + "<td>" + productsRS.getDouble("price") + "\r\n");
+                        if (userLoggedIn) {
+                            bw.write("<td> <button><a href=\"order_" + productsRS.getInt("id") + "\">add to cart</a></button><br></td>\r\n");
+                        }
                         bw.write("</tr>\r\n");
                     }
                     bw.write("<tbody>\r\n");
@@ -195,7 +209,10 @@ public class HTTPHelper implements Helper {
                         System.out.println("Name: " + productsRS.getString("name") + ", rate: " + productsRS.getDouble("rate") + " price: " + productsRS.getDouble("price"));
                         bw.write("<tr>\r\n");
                         bw.write("<td>\r\n");
-                        bw.write("<td>" + productsRS.getString("name") + "<td>" + productsRS.getDouble("rate") + "<td>" + productsRS.getDouble("price") + "<td> <button><a href=\"order_" + productsRS.getInt("id") + "\">add to cart</a></button><br></td>" + "\r\n");
+                        bw.write("<td>" + productsRS.getString("name") + "<td>" + productsRS.getDouble("rate") + "<td>" + productsRS.getDouble("price") + "\r\n");
+                        if (userLoggedIn) {
+                            bw.write("<td><button><a href=\"order_" + productsRS.getInt("id") + "\">add to cart</a></button><br></td>" + "\r\n");
+                        }
                         bw.write("</tr>\r\n");
                     }
                     bw.write("<tbody>\r\n");
@@ -220,9 +237,10 @@ public class HTTPHelper implements Helper {
             bw.write("\r\n");
             bw.write("<html>\r\n");
             bw.write("<body>\r\n");
+            bw.write("<h2>user: " + this.userName + "</h2>\r\n");
+            System.out.println(this.userName);
 
             try (Statement stmt = DBHelper.connection.createStatement()) {
-
                 ResultSet productsCountRS = stmt.executeQuery("select count(name) as count from cart");
                 int productsCount = 0;
                 if (productsCountRS.next()) {
@@ -230,11 +248,11 @@ public class HTTPHelper implements Helper {
                 }
                 if (productsCount < 1) {
                     System.out.println("cart empty");
-                    bw.write("<h4>cart empty</h4>\r\n");
+                    bw.write("<h3>cart empty</h3>\r\n");
                 } else {
-                    ResultSet productsRS = stmt.executeQuery("select * from cart join categories on cart.category_id = categories.id");
+                    ResultSet productsRS = stmt.executeQuery("select * from cart join categories on cart.category_id = categories.id where user_id = " + userID);
 
-                    bw.write("<h4>Cart</h4>\r\n");
+                    bw.write("<h3>Cart</h3>\r\n");
                     bw.write("<table>\r\n");
                     bw.write("<thead>\r\n");
                     bw.write("<th>\r\n");
@@ -305,12 +323,13 @@ public class HTTPHelper implements Helper {
             while (productsRS.next()) {
                 System.out.println("product added to cart:");
                 System.out.println("Name: " + productsRS.getString("name") + ", Rate: " + productsRS.getDouble("rate") + " Price: " + productsRS.getDouble("price") + "€.");
-                PreparedStatement insertProductToCart = DBHelper.connection.prepareStatement("INSERT INTO cart(category_id, product_id, name, rate, price) VALUES(?, ?, ?, ?, ?)");
-                insertProductToCart.setInt(1, productsRS.getInt("category_id"));
-                insertProductToCart.setInt(2, productID);
-                insertProductToCart.setString(3, productsRS.getString("name"));
-                insertProductToCart.setDouble(4, productsRS.getDouble("rate"));
-                insertProductToCart.setDouble(5, productsRS.getDouble("price"));
+                PreparedStatement insertProductToCart = DBHelper.connection.prepareStatement("INSERT INTO cart(user_id, category_id, product_id, name, rate, price) VALUES(?, ?, ?, ?, ?, ?)");
+                insertProductToCart.setInt(1, userID);
+                insertProductToCart.setInt(2, productsRS.getInt("category_id"));
+                insertProductToCart.setInt(3, productID);
+                insertProductToCart.setString(4, productsRS.getString("name"));
+                insertProductToCart.setDouble(5, productsRS.getDouble("rate"));
+                insertProductToCart.setDouble(6, productsRS.getDouble("price"));
                 insertProductToCart.execute();
                 Product product = new Product.Builder()
                         .name(productsRS.getString("name"))
@@ -318,8 +337,6 @@ public class HTTPHelper implements Helper {
                         .price(productsRS.getDouble("price"))
                         .build();
                 products.add(product);
-
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -330,16 +347,103 @@ public class HTTPHelper implements Helper {
             bw.write("\r\n");
             bw.write("<html>\r\n");
             bw.write("<body>\r\n");
-            bw.write("<h4>Product added cart</h4>\r\n");
+            bw.write("<h4>Product added to cart</h4>\r\n");
             bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
             bw.write("<button> <a href=\"/cart\">CART</a></button>\r\n");
             bw.write("</body>\r\n");
             bw.write("</html>\r\n");
             bw.flush();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
+    }
+
+    public void logInGET() {
+        try {
+            bw.write("HTTP/1.1 200 OK\r\n");
+            bw.write("\r\n");
+            bw.write("<html>\r\n");
+            bw.write("<body>\r\n");
+            bw.write("<form method=\"POST\">\r\n");
+            bw.write("<input name=\"Username\"><br>\r\n");
+            bw.write("<input name=\"Password\"><br>\r\n");
+            bw.write("<input type=\"submit\" value=\"Log in\" href=\"/\">\r\n");
+            bw.write("</form>\r\n");
+            bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
+            bw.write("</body>\r\n");
+            bw.write("</html>\r\n");
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void logInPOST(String userName, String password) throws IOException {
+        try (Statement stmt = DBHelper.connection.createStatement()) {
+            ResultSet usersRS = stmt.executeQuery("select * from users where username= '" + userName + "' and password = '" + password + "'");
+            if (usersRS.next()) {
+                if (userName.equalsIgnoreCase(usersRS.getString("username")) && password.equals(usersRS.getString("password"))) {
+                    userID = usersRS.getInt("id");
+                    userLoggedIn = true;
+                    this.userName = usersRS.getString("username");
+                    showIndex();
+                }
+            } else {
+                try {
+                    bw.write("HTTP/1.1 200 OK\r\n");
+                    bw.write("\r\n");
+                    bw.write("<html>\r\n");
+                    bw.write("<body>\r\n");
+                    bw.write("<h4>COULDN'T LOG IN</h4>\r\n");
+                    bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
+                    bw.write("</body>\r\n");
+                    bw.write("</html>\r\n");
+                    bw.flush();
+
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void registerGET() {
+        try {
+            bw.write("HTTP/1.1 200 OK\r\n");
+            bw.write("\r\n");
+            bw.write("<html>\r\n");
+            bw.write("<body>\r\n");
+            bw.write("<form method=\"POST\">\r\n");
+            bw.write("<input name=\"Username\"><br>\r\n");
+            bw.write("<input name=\"Password\"><br>\r\n");
+            bw.write("<input type=\"submit\" value=\"Register\" href=\"/\">\r\n");
+            bw.write("</form>\r\n");
+            bw.write("<button> <a href=\"/\">HOME</a></button>\r\n");
+            bw.write("</body>\r\n");
+            bw.write("</html>\r\n");
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void registerPOST(String username, String password) throws IOException {
+        try (Statement stmt = DBHelper.connection.createStatement()) {
+            stmt.execute("insert into users(username, password) values('" + username + "', '" + password + "')");
+            logInPOST(username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void logOut() throws IOException {
+        userLoggedIn = false;
+        userName = "";
+        showIndex();
     }
 
     @Override
