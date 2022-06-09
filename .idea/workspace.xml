@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="implemented all types of products lists needed;&#10;TODO: finish cart logic, authentication">
+    <list default="true" id="98d62381-6253-4654-9f84-eb18ddc4053b" name="Changes" comment="authentication (register, login), cart implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/src/main/java/consoleApp/StoreApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp/target/classes/consoleApp/StoreApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/DBHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/HTTP/HTTPHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/HTTP/HTTPHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/HTTP/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/HTTP/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/resources/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/resources/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/helpers/StoreHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654535966774</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="authentication (register, login), cart implemented.">
+      <created>1654788922190</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1654788922190</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -342,7 +347,8 @@
     <MESSAGE value="Categories and products are stored in DB." />
     <MESSAGE value="updated connection url and init.sql file" />
     <MESSAGE value="implemented all types of products lists needed;&#10;TODO: finish cart logic, authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented all types of products lists needed;&#10;TODO: finish cart logic, authentication" />
+    <MESSAGE value="authentication (register, login), cart implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="authentication (register, login), cart implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

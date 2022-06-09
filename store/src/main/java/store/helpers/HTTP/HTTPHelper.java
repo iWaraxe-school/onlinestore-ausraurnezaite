@@ -460,7 +460,7 @@ public class HTTPHelper implements Helper {
                 insertCategories.setInt(1, i + 1);
                 insertCategories.setString(2, categories.get(i).getName().toString());
                 insertCategories.execute();
-                int randomProductAmountToAdd = new Random().nextInt(10) + 1;
+                int randomProductAmountToAdd = faker.random().nextInt(3, 10);
                 for (int j = 0; j < randomProductAmountToAdd; j++) {
                     PreparedStatement insertProduct = DBHelper.connection.prepareStatement("INSERT INTO products(category_id, name, rate, price) VALUES(?, ?, ?, ?)");
                     insertProduct.setInt(1, i + 1);
