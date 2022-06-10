@@ -45,8 +45,7 @@ public class StoreHelper implements Helper {
         //Create random number of random products for each category
         for (Class<? extends Category> type : subTypes) {
             try {
-                Random random = new Random();
-                productsToAdd.put(type.getConstructor().newInstance(), random.nextInt(10));
+                productsToAdd.put(type.getConstructor().newInstance(), faker.random().nextInt(3, 10));
 
             } catch (InstantiationException e) {
                 e.printStackTrace();
@@ -78,7 +77,7 @@ public class StoreHelper implements Helper {
 
 
     public List<Product> getTop5ProductList() {
-        Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceDESC.xml");
+        Map<String, String> sortTypesMap = XMLParser.getSortTypes("store/src/main/resources/priceDESC.xml");
         List<Product> sorted = new ProductComparator().sortProducts(getAllProducts(), sortTypesMap).subList(0, 5);
         return sorted;
     }
@@ -90,7 +89,7 @@ public class StoreHelper implements Helper {
     }
 
     public List<Product> getAllProductsByPriceListASC() {
-        Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceASC.xml");
+        Map<String, String> sortTypesMap = XMLParser.getSortTypes("store/src/main/resources/priceASC.xml");
         List<Product> sorted = new ProductComparator().sortProducts(getAllProducts(), sortTypesMap);
         return sorted;
     }
@@ -102,7 +101,7 @@ public class StoreHelper implements Helper {
     }
 
     public void printSortedStore() {
-        Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceASC.xml");
+        Map<String, String> sortTypesMap = XMLParser.getSortTypes("store/src/main/resources/priceASC.xml");
         List<Category> categories = new ArrayList<>(store.getCategoriesList());
         StringBuilder stringBuilder = new StringBuilder("All categories sorted by price: \n");
         categories.forEach(category -> {

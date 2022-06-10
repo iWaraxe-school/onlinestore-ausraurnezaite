@@ -4,6 +4,7 @@ import store.helpers.DBHelper;
 
 import store.helpers.HTTP.Server;
 import store.helpers.PurchasedProductsCleanUp;
+import store.helpers.StoreHelper;
 
 
 public class StoreApp {

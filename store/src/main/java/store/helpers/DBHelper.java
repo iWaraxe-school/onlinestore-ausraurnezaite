@@ -1,7 +1,6 @@
 package store.helpers;
 
 import categories.Category;
-import com.github.javafaker.Cat;
 import products.Product;
 import store.Store;
 import store.parser.XMLParser;
@@ -18,8 +17,8 @@ public class DBHelper implements Helper {
     static {
         try {
             Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection("jdbc:h2:~/test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
-//            connection = DriverManager.getConnection("jdbc:h2:mem:test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
+//            connection = DriverManager.getConnection("jdbc:h2:~/test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
+            connection = DriverManager.getConnection("jdbc:h2:mem:test;INIT=runscript from 'store/src/main/resources/init.sql'", "sa", "");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -34,7 +33,7 @@ public class DBHelper implements Helper {
                 insertCategories.setInt(1, i + 1);
                 insertCategories.setString(2, categories.get(i).getName().toString());
                 insertCategories.execute();
-                int randomProductAmountToAdd = new Random().nextInt(10) + 1;
+                int randomProductAmountToAdd = faker.random().nextInt(3,10);
                 for (int j = 0; j < randomProductAmountToAdd; j++) {
                     PreparedStatement insertProduct = connection.prepareStatement("INSERT INTO products(category_id, name, rate, price) VALUES(?, ?, ?, ?)");
                     insertProduct.setInt(1, i + 1);
@@ -53,7 +52,7 @@ public class DBHelper implements Helper {
     @Override
     public void top5() {
         try (Statement stmt = DBHelper.connection.createStatement()) {
-            Map<String, String> sortTypesMap = XMLParser.getSortTypes("C:\\Users\\AusraUrnezaite\\IdeaProjects\\onlinestore-ausraurnezaite\\store\\src\\main\\resources\\priceDESC.xml");
+            Map<String, String> sortTypesMap = XMLParser.getSortTypes("store/src/main/resources/priceDESC.xml");
             for (Map.Entry<String, String> entry : sortTypesMap.entrySet()) {
 
                 ResultSet productsRS = stmt.executeQuery("select * from products order by " + entry.getKey() + " " + entry.getValue() + " limit 5");
