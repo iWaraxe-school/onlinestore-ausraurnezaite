@@ -11,6 +11,7 @@ public class Server {
 
     private static final int PORT = 9000;
     private static final String HTTP_VERSION = "HTTP/1.1";
+    private static final String FAVICON = "/favicon.ico";
     private static final String GET = "GET";
     private static final String POST = "POST";
     private static final String QUIT = "/quit";
@@ -44,9 +45,14 @@ public class Server {
                     String line = br.readLine();
 
                     if (line != null) {
-                        System.out.println(line);
+
                         String[] parts = line.split(" ");
+                        if (!FAVICON.equals(parts[1])) {
+                            System.out.println(line);
+                        }
                         if (parts.length == 3 && parts[2].equals(HTTP_VERSION)) {
+
+
                             if (GET.equals(parts[0]) && QUIT.equals(parts[1])) {
                                 httpHelper.quit();
                                 socket.close();
@@ -75,10 +81,10 @@ public class Server {
                                 httpHelper.createOrder(productID);
 
                             } else if (parts[1].contains(REMOVE)) {
-                                System.out.println(parts[1]);
+//                                System.out.println(parts[1]);
                                 String[] order = parts[1].split("_");
                                 int cartID = Integer.parseInt(order[1]);
-                                System.out.println(cartID);
+//                                System.out.println(cartID);
                                 httpHelper.removeFromCart((cartID));
 
                             } else if (GET.equals(parts[0]) && LOGIN.equals(parts[1])) {
@@ -110,7 +116,7 @@ public class Server {
                                 //read headers
                                 String headerLine = null;
                                 while ((headerLine = br.readLine()).length() != 0) {
-                                    System.out.println(headerLine);
+//                                    System.out.println(headerLine);
                                 }
                                 //read the post payload data
                                 StringBuilder payload = new StringBuilder();
@@ -125,7 +131,6 @@ public class Server {
                                 String password = passwordPair[1];
                                 httpHelper.registerPOST(username, password);
                             }
-
                         } else {
                             System.err.println("Non-HTTP request");
                         }

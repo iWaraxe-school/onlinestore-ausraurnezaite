@@ -72,7 +72,6 @@ public class HTTPHelper implements Helper {
         bw.write("<button><a href = \"sort\" > List all categories sorted by price</a></button><br>\r\n");
         bw.write("<button><a href = \"top\" > Top 5 </a ></button><br>\r\n");
 
-
         if (userLoggedIn) {
             bw.write("<button><a href = \"logout\" > Log out </a ></button><br>\r\n");
         } else {
@@ -241,7 +240,6 @@ public class HTTPHelper implements Helper {
             bw.write("<html>\r\n");
             bw.write("<body>\r\n");
             bw.write("<h2>user: " + this.userName + "</h2>\r\n");
-            System.out.println(this.userName);
 
             try (Statement stmt = DBHelper.connection.createStatement()) {
                 ResultSet productsCountRS = stmt.executeQuery("select count(name) as count from cart");
@@ -250,7 +248,7 @@ public class HTTPHelper implements Helper {
                     productsCount = productsCountRS.getInt("count");
                 }
                 if (productsCount < 1) {
-                    System.out.println("cart empty");
+                    System.out.println(this.userName +"'s cart empty");
                     bw.write("<h3>cart empty</h3>\r\n");
                 } else {
                     ResultSet productsRS = stmt.executeQuery("select * from cart join categories on cart.category_id = categories.id where user_id = " + userID);
@@ -267,7 +265,7 @@ public class HTTPHelper implements Helper {
                     bw.write("</thead>\r\n");
                     bw.write("<tbody>\r\n");
 
-                    System.out.println("Products in cart: ");
+                    System.out.println("Products in " + this.userName + "'s cart: ");
                     while (productsRS.next()) {
                         System.out.println(productsRS.getString("categories.name") + " Name: " + productsRS.getString("name") + ", rate: " + productsRS.getDouble("rate") + " price: " + productsRS.getDouble("price"));
                         bw.write("<tr>\r\n");
@@ -387,7 +385,7 @@ public class HTTPHelper implements Helper {
             ResultSet usersRS = stmt.executeQuery("select * from users where username= '" + userName + "' and hash = '" + password.hashCode() + "'");
             if (usersRS.next()) {
                 if (userName.equalsIgnoreCase(usersRS.getString("username")) && password.hashCode() == usersRS.getInt("hash")) {
-                    System.out.println(usersRS.getInt("hash"));
+                    System.out.println("password hash: " + usersRS.getInt("hash"));
                     userID = usersRS.getInt("id");
                     userLoggedIn = true;
                     this.userName = usersRS.getString("username");
