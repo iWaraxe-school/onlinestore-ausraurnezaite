@@ -10,11 +10,14 @@ import store.parser.XMLParser;
 
 import java.io.*;
 import java.net.Socket;
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
+
 
 public class HTTPHelper implements Helper {
     private static Socket socket;
@@ -381,9 +384,10 @@ public class HTTPHelper implements Helper {
 
     public void logInPOST(String userName, String password) throws IOException {
         try (Statement stmt = DBHelper.connection.createStatement()) {
-            ResultSet usersRS = stmt.executeQuery("select * from users where username= '" + userName + "' and password = '" + password + "'");
+            ResultSet usersRS = stmt.executeQuery("select * from users where username= '" + userName + "' and hash = '" + password.hashCode() + "'");
             if (usersRS.next()) {
-                if (userName.equalsIgnoreCase(usersRS.getString("username")) && password.equals(usersRS.getString("password"))) {
+                if (userName.equalsIgnoreCase(usersRS.getString("username")) && password.hashCode() == usersRS.getInt("hash")) {
+                    System.out.println(usersRS.getInt("hash"));
                     userID = usersRS.getInt("id");
                     userLoggedIn = true;
                     this.userName = usersRS.getString("username");
@@ -433,7 +437,7 @@ public class HTTPHelper implements Helper {
 
     public void registerPOST(String username, String password) throws IOException {
         try (Statement stmt = DBHelper.connection.createStatement()) {
-            stmt.execute("insert into users(username, password) values('" + username + "', '" + password + "')");
+            stmt.execute("insert into users(username, hash) values('" + username + "', '" + password.hashCode() + "')");
             logInPOST(username, password);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -470,10 +474,8 @@ public class HTTPHelper implements Helper {
                     insertProduct.execute();
                 }
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }
